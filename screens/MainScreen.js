@@ -191,7 +191,7 @@ const UserMenu = (props) => {
           props.isIcon ? (
             <Avatar
                     rounded
-                    size="medium"
+                    size="small"
                     avatarStyle={{borderColor: COLORS.WHITE, borderWidth: 1}}
                     containerStyle={{backgroundColor: COLORS.BLACK}}
                     source={{
