@@ -1,14 +1,21 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
-import {Button} from 'react-native-elements'
+import { StyleSheet } from 'react-native'
+import { List  } from 'react-native-paper';
+
 
 
 const HomeScreen = ({navigation}) => {
-    
-    return (
-        <View>
-        </View>
-    )
+
+  return (
+    <List.Section title="Accordions">
+      <List.Accordion
+        title="Uncontrolled Accordion"
+        left={props => <List.Icon {...props} icon="folder" />}>
+        <List.Item title="First item" />
+        <List.Item title="Second item" />
+      </List.Accordion>
+    </List.Section>
+    );
 }
 
 export default HomeScreen
