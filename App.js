@@ -64,7 +64,11 @@ export default function App() {
                 <StatusBar style="light" />
                 <Stack.Navigator screenOptions={globalScreenOptions}>
                   {storedToken ? 
-                    (<Stack.Screen name="Main" component={MainScreen} />)
+                    (
+                      <>
+                        <Stack.Screen name="Main" component={MainScreen} />
+                      </>
+                    )
                     :
                     (
                       <>

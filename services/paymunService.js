@@ -1,5 +1,5 @@
 const URLS= {
-  BASE_URL: "http://paymun.net",
+  BASE_URL: "http://194.59.171.232:7777",//"http://paymun.net",
   CREATE_TOKEN: "/api/account/CreateToken",
   PROFILE: "/api/account/Profile",
 

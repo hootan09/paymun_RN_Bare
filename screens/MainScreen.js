@@ -23,8 +23,7 @@ import COLORS from "../constants/Colors";
 const Drawer = createDrawerNavigator();
 
 
-const MainScreen = ({navigation}) => {
-
+const MainScreen = ({route,navigation}) => {
   const [title, setTitle] = useState("Main");
 
   useLayoutEffect(() => {
@@ -49,7 +48,7 @@ const MainScreen = ({navigation}) => {
         </View>
           )
       })
-  }, [navigation]);
+  }, [navigation, title]);
 
     return (
       <>
@@ -94,20 +93,54 @@ const MainScreen = ({navigation}) => {
             itemStyle: { marginVertical: 1 },
           }}
           >
-          <Drawer.Screen name="Home"component={HomeScreen}
+          <Drawer.Screen name="Home" component={HomeScreen}
             options={{
-              headerTitle: "HOME",
               drawerIcon: () => <Icon
                 size={23}
                 type='font-awesome'
                 name={Platform.OS === 'android' ? 'home' : 'home'}></Icon>
-            }} 
+            }}
+            listeners={{
+              focus: e => {
+                setTitle("Home");
+              },
+            }}
             />
-          <Drawer.Screen name="ClockIn" component={ClockInScreen}/>
-          <Drawer.Screen name="TimeCard" component={TimeCardScreen}/>
-          <Drawer.Screen name="Lunch" component={LunchScreen}/>
-          <Drawer.Screen name="TimeCardOut" component={TimeCardOutScreen}  />
-          <Drawer.Screen name="Dailies" component={DailiesScreen}  />
+          <Drawer.Screen name="ClockIn" component={ClockInScreen}
+            listeners={{
+              focus: e => {
+                setTitle("ClockIn");
+              },
+            }}
+          />
+          <Drawer.Screen name="TimeCard" component={TimeCardScreen}
+          listeners={{
+            focus: e => {
+              setTitle("TimeCard");
+            },
+          }}
+          />
+          <Drawer.Screen name="Lunch" component={LunchScreen}
+            listeners={{
+              focus: e => {
+                setTitle("Lunch");
+              },
+            }}
+          />
+          <Drawer.Screen name="TimeCardOut" component={TimeCardOutScreen}
+          listeners={{
+            focus: e => {
+              setTitle("TimeCardOut");
+            },
+          }}
+          />
+          <Drawer.Screen name="Dailies" component={DailiesScreen}
+          listeners={{
+            focus: e => {
+              setTitle("Dailies");
+            },
+          }}
+          />
         </Drawer.Navigator>
       </>
     )
