@@ -115,7 +115,7 @@ const UserMenu = (props) => {
                   <Text style={{
                           fontSize: 16,
                           color: COLORS.BLACK
-                      }}> Settings</Text>
+                      }}> Profile</Text>
               </View>
           </MenuItem>
   

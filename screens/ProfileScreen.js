@@ -70,7 +70,7 @@ const ProfileScreen = ({navigation, route}) => {
                     <Text h5>Code: {profile.intCode}</Text>
                     <Text h5>Age: {profile.age}</Text>
                     <Text h5>BirthDate: {profile.chBrithDate || 'None'}</Text>
-                    <Text h5>Position: {profile.chPosition || 'None'}</Text>
+                    <Text h5>Job Title: {profile.chPosition || 'None'}</Text>
                     </>
                 )}
                 <Text h5>PhoneNumber: {route?.params?.phoneNumber || profile?.chMobile || 'None'}</Text>
