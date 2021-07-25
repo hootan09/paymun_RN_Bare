@@ -8,6 +8,7 @@ import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import MainScreen from './screens/MainScreen';
+import ClockInScreen from './screens/ClockInScreen';
 
 import AppLoading from "expo-app-loading";
 
@@ -22,9 +23,9 @@ import { useFonts } from "expo-font";
 const Stack = createStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: { backgroundColor: COLORS.ACTIVE },
+  headerStyle: { backgroundColor: COLORS.PURPLE },
   headerTitleStyle: { color: COLORS.WHITE },
-  headerTintColor: COLORS.WHITE
+  headerTintColor: COLORS.PURPLE_LIGHT_GRAY
 }
 
 export default function App() {
@@ -67,6 +68,7 @@ export default function App() {
                     (
                       <>
                         <Stack.Screen name="Main" component={MainScreen} />
+                        <Stack.Screen name="ClockIn" component={ClockInScreen} />
                       </>
                     )
                     :

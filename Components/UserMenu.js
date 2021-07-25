@@ -7,6 +7,8 @@ import { Alert, Platform, View } from 'react-native';
 import { Icon, Avatar,Text } from "react-native-elements";
 import Menu, {MenuItem, MenuDivider} from 'react-native-material-menu';
 
+import MaterialCommunityIcons  from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import IMAGES from "../constants/Images";
 import COLORS from "../constants/Colors";
 import { POST, URLS } from '../services/paymunService';
